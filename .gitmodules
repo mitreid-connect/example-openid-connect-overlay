@@ -1,0 +1,3 @@
+[submodule "OpenID-Connect-Java-Spring-Server"]
+	path = OpenID-Connect-Java-Spring-Server
+	url = https://github.com/mitreid-connect/OpenID-Connect-Java-Spring-Server.git
