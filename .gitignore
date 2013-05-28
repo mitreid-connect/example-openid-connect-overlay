@@ -1,0 +1,13 @@
+local-values.conf
+target
+*~
+bin
+*.idea
+*.iml
+*.eml
+.project
+.settings
+.classpath
+deploy.tar.gz
+mitre-openid-connect/conf/mitre-config.log
+
