@@ -11,14 +11,14 @@ public class ExampleUserInfo implements UserInfo {
 	 * @return the userId
 	 */
 	@Id
-	public String getUserId(){
+	public String getSub(){
 		return "USERID";
         }
 
 	/**
-	 * @param userId the userId to set
+	 * @param sub the userId to set
 	 */
-	public void setUserId(String userId){
+	public void setSub(String sub){
 	}
 	
 	/**
@@ -242,6 +242,20 @@ public class ExampleUserInfo implements UserInfo {
 	 * @param updatedTime the updatedTime to set
 	 */
 	public void setUpdatedTime(String updatedTime){}
+
+
+	/**
+	 * 
+	 */
+	public String getBirthdate() {
+		return null;
+	}
+
+	/**
+	 * 
+	 * @param birthdate
+	 */
+	public void setBirthdate(String birthdate) {}
 
 
 }
