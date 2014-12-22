@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2014 The MITRE Corporation 
+    and the MIT Kerberos and Internet Trust Consortium
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:oauth2="http://www.springframework.org/schema/security/oauth2"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/security/oauth2 http://www.springframework.org/schema/security/spring-security-oauth2.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+	<bean id="configBean" class="org.mitre.openid.connect.config.ConfigurationPropertiesBean">
+	    
+	    <!-- This property is changed to match the deployed URL of the example overlay project. -->
+	    <!-- This property sets the root URL of the server, known as the issuer -->
+		<property name="issuer" value="http://localhost:8080/my-openid-connect-server/" />
+		
+		<!-- This property is a URL pointing to a logo image 24px high to be used in the top bar -->
+ 		<property name="logoImageUrl" value="resources/images/openid_connect_small.png" />
+ 		
+ 		<!-- This property sets the display name of the server, displayed in the topbar and page title -->
+ 		<property name="topbarTitle" value="OpenID Connect Server" />
+ 		
+		<!-- This property sets the lifetime of registration access tokens, in seconds. Leave it unset (null) for no rotation. -->
+		<!-- <property name="regTokenLifeTime" value="172800" /> -->
+		
+		<!-- This property forces the issuer value to start with "https" -->
+		<!-- <property name="forceHttps" value="true" /> -->
+
+	</bean>
+	
+</beans>
