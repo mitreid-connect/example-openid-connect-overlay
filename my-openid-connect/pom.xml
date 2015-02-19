@@ -27,6 +27,10 @@
             <overlay>
               <groupId>org.mitre</groupId>
               <artifactId>openid-connect-server-webapp</artifactId>
+              <excludes>
+              	<!-- exclude the upstream keystore -->
+              	<exclude>WEB-INF/classes/keystore.jwks</exclude>
+              </excludes>
             </overlay>
           </overlays>
         </configuration>

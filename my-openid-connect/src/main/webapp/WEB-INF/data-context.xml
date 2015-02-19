@@ -30,6 +30,6 @@
 	-->
 
 
-	<import resource="file:/etc/mitreid-connect/data-contex.xml" />
+	<import resource="file:/etc/mitreid-connect/data-context.xml" />
 
 </beans>
